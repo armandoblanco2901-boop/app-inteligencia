@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { REPORT_CONTEXT } from "../constants";
 
-const apiKey = process.env.API_KEY || '';
+const apiKey = import.meta.env.VITE_API_KEY || '';
 // Initialize safe client creation
 const createClient = () => {
     if (!apiKey) {
